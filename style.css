@@ -1,0 +1,194 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Font and Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Particles Background */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Position behind other elements */
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    z-index: 10; /* Bring nav above particles */
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(15, 32, 39, 0.9);
+    padding: 15px 0;
+    transition: background 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+/* Hero Section Styles */
+#home {
+    background: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('../images/tech-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1; /* Ensure it sits above particles */
+}
+
+#home h1 {
+    font-size: 3rem; /* Responsive font size */
+    animation: slideIn 1s; /* Animation for heading */
+}
+
+#home p {
+    font-size: 1.5rem; /* Adjust for better visibility */
+}
+
+.btn {
+    background-color: #007BFF; /* Button color */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Button hover effect */
+    margin-top: 20px; /* Add margin to button */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight grow effect */
+}
+
+/* About Section */
+#about {
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px;
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s; /* Project card hover effect */
+    width: 300px; /* Fixed width for cards */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(15, 32, 39, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Keyframes for animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+    
+    #home p {
+        font-size: 1.2rem; /* Adjust paragraph size */
+    }
+    
+    .project-container {
+        flex-direction: column; /* Stack cards on smaller screens */
+    }
+    
+    .project-card {
+        width: 90%; /* Full width on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
